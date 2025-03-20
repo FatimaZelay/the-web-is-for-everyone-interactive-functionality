@@ -1,0 +1,132 @@
+/* General Page Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #3F1D74;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+.header {
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Playlist List */
+#playlistList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.playlist-card {
+    background: white;
+    color: black;
+    border-radius: 10px;
+    padding: 0;
+    margin-bottom: 10px;
+    width: 90%;
+    min-width: 300px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.playlist-card img {
+    width: 112px;
+    height: 95px;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+    flex-shrink: 0;
+}
+
+.playlist-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+    flex: 1;
+}
+
+.playlist-card h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+}
+
+.playlist-card p {
+    font-size: 14px;
+    color: gray;
+    margin: 0;
+}
+
+/* Flag Styling */
+/* .flag-container {
+    position: absolute;
+    top: 10px;
+    right: 40px;
+}
+
+/* Flag Styling */
+/* .flag-container {
+    position: absolute;
+    top: 12px;
+    right: 38px;
+} */
+
+.flag-icon {
+    width: 10px;  /* Decreased from 14px */
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* Heart Button */
+.heart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: fill 0.3s ease;
+}
+
+.heart path {
+    fill: gray;
+    transition: fill 0.3s ease;
+}
+
+.heart.liked path {
+    fill: red;
+}
+
+/* Responsive Media Queries */
+@media (min-width: 481px) {
+    .playlist-card {
+        width: 90%;
+        min-width: 300px;
+    }
+}
+
+@media (min-width: 769px) {
+    .playlist-card {
+        width: 80%;
+        min-width: 350px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .playlist-card {
+        width: 70%;
+        min-width: 400px;
+    }
+}
