@@ -40,7 +40,7 @@ app.get('/', async function (request, response) {
   const apiResponseJSON = await apiResponse.json ();
    // Render index.liquid uit de Views map
    // Geef hier eventueel data aan mee
-   response.render('index.liquid', { playlists: apiResponseJSON.data });
+   response.render('index.liquid', { playlists: apiResponseJSON.data});
 });
 
 
@@ -56,7 +56,7 @@ app.get('/liked', async function (request, response) {
   const likedapiResponse = await fetch('https://fdnd-agency.directus.app/items/tm_playlist')
   const likedResponseJSON  = await likedapiResponse.json() 
 
-  response.render('liked.liquid', { playlists: likedResponseJSON.data });
+  response.render('liked.liquid', { playlists: likedResponseJSON.data, succes_message: request.query.succes });
 });
 
 app.post('/like/:id', async function(request, response) {
@@ -71,12 +71,12 @@ app.post('/like/:id', async function(request, response) {
     }
   });
 
-  response.redirect(303, '/liked')
+  response.redirect(303, '/liked/?succes=De playlist is toegevoegd!')
 })
 
 // Stel het poortnummer in waar Express op moet gaan luisteren
 // Lokaal is dit poort 8000, als dit ergens gehost wordt, is het waarschijnlijk poort 80
-app.set('port', process.env.PORT || 8000)
+app.set('port', process.env.PORT || 8001)
 
 // Start Express op, haal daarbij het zojuist ingestelde poortnummer op
 app.listen(app.get('port'), function () {
