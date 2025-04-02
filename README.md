@@ -19,16 +19,21 @@ Ik heb gewerkt aan de playlists Pagina van Tumi Mundo, Ik heb de playlists geren
 Hieronder kan je een filmpje zien van hoe de website functioneerd:
 
 
-https://github.com/user-attachments/assets/be2a926b-6356-47bc-88aa-31116a85c060
+
+https://github.com/user-attachments/assets/c61c3e75-14fc-4b52-b06c-ccdb1da28cf7
+
 
 Bezoek de website via deze link:
 
 https://the-web-is-for-everyone-interactive-1ob9.onrender.com
 
 ### Gebruik
-<!-- Bij Gebruik staat de user story, hoe het werkt en wat je er mee kan. -->
 
 Ik heb voor deze functionaliteiten gekozen omdat ik het mogelijk wil maken voor gebruikers om favoriete playlisten ergens te kunnen toevoegen zodat het makkelijk terug te vinden is voor de gebruiker/ouder in dit geval. 
+
+issue van de user test:
+
+https://github.com/FatimaZelay/the-web-is-for-everyone-interactive-functionality/issues/2#issue-2924670033
 
 ### Kenmerken
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? Misschien heb je iets met NodeJS gedaan, of heb je een framework of library gebruikt? -->
@@ -43,6 +48,10 @@ Voor CSS heb ik 2 stylesheets gebruikt, de style.css voor de index.liquid en de 
     {% if title == "Liked Playlists" %}
         <link rel="stylesheet" href="/styles/styleliked.css">
       {% endif %} `
+
+NodeJS heb ik gebruikt om routes aan te maken voor de playlist en liked playlist, ook heb een POST gebruikt voor de like functie en succes message (UI State).
+
+
 
 ### Installatie
 
