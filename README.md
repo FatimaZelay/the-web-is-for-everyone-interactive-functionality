@@ -44,10 +44,10 @@ De technieken die ik heb gebruikt zijn HTML, CSS, JS en NodeJS.
 Voor HTML heb ik liquid gebruikt, head.liquid, foot.liquid, index.liquid voor alle playlists en liked.liquid voor de geliked playlysist.
 Voor CSS heb ik 2 stylesheets gebruikt, de style.css voor de index.liquid en de liked.css voor de liked liquid. Ik heb dat kunnen doen door de volgende code te verwerken in de head.liquid:
 
- < link rel="stylesheet" href="/styles/style.css" >
+` < link rel="stylesheet" href="/styles/style.css" >
     {% if title == "Liked Playlists" %}
         <link rel="stylesheet" href="/styles/styleliked.css">
-      {% endif %}
+      {% endif %} `
 
 ## Installatie
 
