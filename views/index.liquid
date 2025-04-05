@@ -18,6 +18,10 @@
             {% comment %} <div class="flag-container">
                 <img class="flag-icon" src="flagimage.png" alt="English">
             </div> {% endcomment %}
+            <!-- Play Button -->
+            <button class="play-button">
+                Play {{ playlist.name }}
+            </button>
 
             <!-- Heart Icon -->
              <form method="POST" action="/like/{{ playlist.id }}">
@@ -37,6 +41,18 @@
             hearts.forEach(heart => {
                 heart.addEventListener("click", function () {
                     this.classList.toggle("liked");
+            const playButtons = document.querySelectorAll(".play-button");
+
+            playButtons.forEach(button => {
+                button.addEventListener("click", function () {
+                    
+                    this.classList.add("loading");
+
+                    setTimeout(() => {
+                       
+                        this.classList.remove("loading"); 
+                        alert("Playing playlist: " + this.textContent.trim());
+                    }, 2000);  // laat zien voor 2 seconden
                 });
             });
         });
