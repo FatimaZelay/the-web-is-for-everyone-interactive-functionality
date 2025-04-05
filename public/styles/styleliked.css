@@ -1,0 +1,150 @@
+body {
+    font-family:"Poppins", sans-serif;
+    background-color: #3a6b9c !important;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+.header {
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Playlist List */
+#playlistList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 25px;
+}
+
+.playlist-card {
+    background: white;
+    color: black;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+.playlist-card img {
+    /* width: 100%; */
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.playlist-card-content {
+    padding: 15px;
+}
+
+.playlist-card h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.playlist-card p {
+    font-size: 14px;
+    color: gray;
+    margin: 0;
+}
+
+/* Heart Button */
+.heart {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    fill: gray;
+    transition: fill 0.3s;
+}
+
+.heart.liked {
+    fill: red;
+}
+
+/* Success Message */
+.succes-box {
+    position: fixed;
+    bottom: 10vh;
+    left: 2vw;
+    background-color: #28a745;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 1s ease-out;
+}
+
+.succes-box h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.succes-box p {
+    font-size: 1em;
+    margin: 0;
+}
+
+
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .playlist-card {
+        width: 80%;
+        min-width: 280px;
+    }
+    
+    #playlistList {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablets and Small Laptops (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .playlist-card {
+        width: 70%;
+        min-width: 320px;
+    }
+
+    #playlistList {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Laptops and Desktops (1025px - 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .playlist-card {
+        width: 60%;
+        min-width: 350px;
+    }
+
+    #playlistList {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Large Screens (1441px and above) */
+@media (min-width: 1441px) {
+    .playlist-card {
+        width: 50%;
+        min-width: 400px;
+    }
+
+    #playlistList {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}

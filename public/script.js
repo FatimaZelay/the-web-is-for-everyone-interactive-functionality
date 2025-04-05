@@ -1,7 +1,0 @@
-if (succesMessage) (
-
-    setTimeout() => { 
-
-
-    }
-)

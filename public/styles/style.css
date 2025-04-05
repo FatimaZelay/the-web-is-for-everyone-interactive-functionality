@@ -1,0 +1,209 @@
+body {
+    font-family:"Poppins", sans-serif;
+    background-color: #361156;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styling */
+.header {
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Search Bar */
+.search-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 10px auto;
+}
+
+#searchBar {
+    width: 85%;
+    padding: 10px 40px 10px 15px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Language Filter */
+.language-filter {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.lang-btn {
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition:0.2s;
+}
+
+.lang-btn:hover {
+    background: #FFA02E;
+}
+
+/* Playlist Cards */
+.playlist-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.playlist-card img {
+    width: 112px;
+    height: 95px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Playlist Language */
+.playlist-language {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+/* Play Button */
+.play-button {
+    background: #059CC0;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    position: relative;
+}
+
+.play-button:hover {
+    background: #FFA02E;
+}
+
+/* Play Button Loading State */
+.play-button.loading {
+    background: #ccc;
+    cursor: not-allowed;
+    color: #fff;
+}
+
+.play-button.loading::after {
+    content: " ...";
+    animation: spinner 1s linear infinite;
+}
+
+/* Spinner Animation */
+@keyframes spinner {
+    0% {
+        content: " ...";
+    }
+    100% {
+        content: " ....";
+    }
+}
+
+/* Playlist List */
+#playlistList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.playlist-card {
+    background: white;
+    color: black;
+    border-radius: 10px;
+    padding: 0;
+    margin-bottom: 10px;
+    width: 90%;
+    min-width: 300px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.playlist-card img {
+    width: 112px;
+    height: 95px;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+    flex-shrink: 0;
+}
+
+.playlist-card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px;
+    flex: 1;
+}
+
+.playlist-card h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+}
+
+.playlist-card p {
+    font-size: 14px;
+    color: gray;
+    margin: 0;
+}
+
+/* Heart Button */
+.heart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: fill 0.3s ease;
+}
+
+.heart path {
+    fill: gray;  /* Default color */
+    transition: fill 0.3s ease;
+}
+
+.heart.liked path {
+    fill: red;  /* Color when liked */
+}
+
+/* Responsive Media Queries */
+@media (min-width: 481px) {
+    .playlist-card {
+        width: 80%;
+        min-width: 300px;
+    }
+}
+
+@media (min-width: 769px) {
+    .playlist-card {
+        width: 80%;
+        min-width: 350px;
+    }
+}
+
+@media (min-width: 1025px) {
+    .playlist-card {
+        width: 70%;
+        min-width: 400px;
+    }
+}
+

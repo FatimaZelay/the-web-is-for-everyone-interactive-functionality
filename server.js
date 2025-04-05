@@ -6,7 +6,7 @@ import express from 'express'
 import { Liquid } from 'liquidjs';
 
 
-console.log('Hieronder moet je waarschijnlijk nog wat veranderen')
+console.log('')
 // Doe een fetch naar de data die je nodig hebt
 // const apiResponse = await fetch('...')
 
