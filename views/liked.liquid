@@ -43,6 +43,15 @@
                     }
                 });
             });
+
+            // Success message fade-out
+            const successBox = document.querySelector(".succes-box");
+            if (successBox) {
+                setTimeout(() => {
+                    successBox.style.opacity = "0";
+                    setTimeout(() => successBox.remove(), 1000);
+                }, 3000);
+            }
         });
     </script>
 
